@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
@@ -36,7 +37,135 @@
         <h1 class="text-center mb-4">Amenazas Comunes en Ciberseguridad</h1>
         <p class="text-center lead">Conoce los tipos de ataques más frecuentes y cómo identificarlos.</p>
 
-        </main>
+        <section class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/phishing.jpg" class="card-img-top" alt="Imagen de Phishing">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Phishing</h5>
+                        <p class="card-text">Fraudes que intentan engañarte para que reveles información sensible como contraseñas o datos de tarjetas de crédito, haciéndose pasar por entidades legítimas.</p>
+                        <button class="btn btn-outline-primary btn-sm toggle-info" data-target="#phishingInfo">Ver más</button>
+                        <div id="phishingInfo" class="additional-info mt-3" style="display: none;">
+                            <h6>¿Cómo funciona?</h6>
+                            <p>Suele ocurrir a través de correos electrónicos, mensajes de texto o sitios web falsos que imitan a organizaciones conocidas.</p>
+                            <p class="small text-muted">Fuente: <a href="https://www.cisa.gov/news-events/news/what-phishing" target="_blank">CISA</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/ransomware.jpg" class="card-img-top" alt="Imagen de Ransomware">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Ransomware</h5>
+                        <p class="card-text">Software malicioso que cifra tus archivos o bloquea tu sistema, exigiendo un pago (rescate) para restaurar el acceso.</p>
+                        <button class="btn btn-outline-primary btn-sm toggle-info" data-target="#ransomwareInfo">Ver más</button>
+                        <div id="ransomwareInfo" class="additional-info mt-3" style="display: none;">
+                            <h6>Impacto:</h6>
+                            <p>Puede afectar a individuos y grandes organizaciones, causando pérdidas de datos y financieras significativas.</p>
+                            <p class="small text-muted">Fuente: <a href="https://www.incibe.es/ciudadanos/conoce-y-protege/tipos-fraudes/ransomware" target="_blank">INCIBE</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/malware.jpg" class="card-img-top" alt="Imagen de Malware">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Malware</h5>
+                        <p class="card-text">Término general para cualquier software diseñado para dañar, deshabilitar, robar datos o realizar otras acciones no autorizadas en un sistema informático.</p>
+                        <button class="btn btn-outline-primary btn-sm toggle-info" data-target="#malwareInfo">Ver más</button>
+                        <div id="malwareInfo" class="additional-info mt-3" style="display: none;">
+                            <h6>Tipos comunes:</h6>
+                            <p>Virus, gusanos, troyanos, spyware y adware.</p>
+                            <p class="small text-muted">Fuente: <a href="https://www.kaspersky.es/resource-center/definitions/what-is-malware" target="_blank">Kaspersky</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/ddos.jpg" class="card-img-top" alt="Imagen de Ataques DDoS">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Ataques DDoS</h5>
+                        <p class="card-text">Ataques de Denegación de Servicio Distribuido que buscan saturar un servidor, servicio o red con tráfico ilegítimo para que deje de funcionar.</p>
+                        <button class="btn btn-outline-primary btn-sm toggle-info" data-target="#ddosInfo">Ver más</button>
+                        <div id="ddosInfo" class="additional-info mt-3" style="display: none;">
+                            <h6>Objetivo:</h6>
+                            <p>Interrumpir el servicio de un sitio web o una aplicación, haciéndolos inaccesibles para sus usuarios legítimos.</p>
+                            <p class="small text-muted">Fuente: <a href="https://www.cloudflare.com/es-es/learning/ddos/what-is-a-ddos-attack/" target="_blank">Cloudflare</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <h2 class="mb-4 text-center">Casos Reales de Ciberataques</h2>
+            <div class="accordion" id="casosAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Caso 1: Fraude de Phishing masivo a Google y Facebook (2019)
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#casosAccordion">
+                        <div class="accordion-body">
+                            Un estafador lituano, Evaldas Rimasauskas, se hizo pasar por un fabricante asiático y logró engañar a Google y Facebook para que le transfirieran más de $120 millones a través de correos electrónicos de phishing y facturas falsas durante dos años. Fue un ataque de "Business Email Compromise" (BEC) a gran escala.
+                            <p class="small text-muted mt-2">Fuente: <a href="https://www.justice.gov/usao-sdny/pr/evil-internet-genius-sentenced-five-years-prison-orchestrating-120-million-phishing" target="_blank">Departamento de Justicia de EE. UU.</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Caso 2: Ransomware a Colonial Pipeline (EE.UU., 2021)
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#casosAccordion">
+                        <div class="accordion-body">
+                            Colonial Pipeline, el operador de un oleoducto clave en EE. UU., sufrió un ataque de ransomware que paralizó sus operaciones. La empresa tuvo que pagar casi $5 millones en Bitcoin a los atacantes para recuperar el control de sus sistemas, lo que generó escasez de combustible en la costa este.
+                            <p class="small text-muted mt-2">Fuente: <a href="https://www.cisa.gov/news-events/news/colonial-pipeline-cyber-attack-incident-review-report" target="_blank">CISA</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Caso 3: Ciberataque global WannaCry (2017)
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#casosAccordion">
+                        <div class="accordion-body">
+                            WannaCry fue un ataque global de ransomware que afectó a cientos de miles de computadoras en 150 países. Explotó una vulnerabilidad en sistemas Windows antiguos. Aunque era un ransomware, se propagó como un gusano (un tipo de malware) y causó interrupciones masivas en servicios de salud, telecomunicaciones y otros sectores.
+                            <p class="small text-muted mt-2">Fuente: <a href="https://www.kaspersky.es/resource-center/threats/wannacry-ransomware" target="_blank">Kaspersky</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Caso 4: Ataques DDoS a sitios gubernamentales de Ucrania (2022)
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#casosAccordion">
+                        <div class="accordion-body">
+                            Poco antes y durante la invasión rusa de Ucrania en 2022, numerosos sitios web gubernamentales y bancarios ucranianos fueron golpeados por masivos ataques de denegación de servicio distribuido (DDoS), buscando desestabilizar la infraestructura y generar caos.
+                            <p class="small text-muted mt-2">Fuente: <a href="https://www.nytimes.com/2022/02/23/technology/ukraine-cyberattacks-ddos.html" target="_blank">The New York Times</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
 
     <footer class="bg-dark text-white text-center py-3 mt-5">
         <p>&copy; 2025 Ciberseguridad. Todos los derechos reservados.</p>
