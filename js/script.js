@@ -1,40 +1,10 @@
 $(document).ready(function() {
-    console.log("jQuery y el script personalizado están listos.");
-
-    $('.toggle-info').on('click', function() {
-        var targetId = $(this).data('target'); 
-        $(targetId).slideToggle(); 
-
-        if ($(this).text() === 'Ver más') {
-            $(this).text('Ver menos');
-        } else {
-            $(this).text('Ver más');
-        }
-    });
-
-    $(document).ready(function() {
-    console.log("jQuery y el script personalizado están listos.");
-
-    if (window.location.pathname.includes("amenazas.html")) {
-        $('.toggle-info').on('click', function() {
-            var targetId = $(this).data('target');
-            $(targetId).slideToggle();
-
-            if ($(this).text() === 'Ver más') {
-                $(this).text('Ver menos');
-            } else {
-                $(this).text('Ver más');
-            }
-        });
-    }
 
     // validación del formulario de contacto
     $('#contactForm').on('submit', function(event) {
         event.preventDefault();
 
-        var name = $('#name').val().trim();
         var email = $('#email').val().trim();
-        var message = $('#message').val().trim();
         var isValid = true;
         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -51,7 +21,7 @@ $(document).ready(function() {
         if (isValid) {
             formAlert.addClass('alert-success').text('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
             this.reset();
-            $('#name, #email, #message').removeClass('is-valid');
+            $('#email').removeClass('is-valid');
         } else {
             formAlert.addClass('alert-danger').text('Por favor, corrige los errores en el formulario.');
         }
@@ -97,6 +67,4 @@ $(document).ready(function() {
         $('#testForm :input').prop('disabled', false);
         $('#testResult').addClass('d-none').text('');
     });
-});
-
 });
